@@ -27,16 +27,63 @@ body {
     background: rgba(255,255,255,.2);
     padding: 20px;
     font-size: 50px;
-    border-radius: 10px;
+    border-radius: 30px;
   }
 
-.btn{
-    margin-top: 80px;
-    margin-left: -240px;
+
+
+
+
+button{
+  position: absolute;
+  border: none;
+  color: #ffffff;
+  width: 9em;
+  height: 3em;
+  line-height: 2em;
+  text-align: center;
+  background: linear-gradient(
+    90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4
+  );
+  background-size: 300%;
+   border-radius: 35px; 
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 1;
+}
+button:hover{
+  animation: animation 8s linear infinite;
+  border: none;
 }
 
-.animate h1{
-    margin-right: 300px;
+@keyframes animation{
+  0% {background-position: 0%;}
+  100% {background-position: 400%}
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4
+  );
+  background-size: 400%;
+  /* border-radius: 35px; */
+  transition: 1s;
+}
+button:hover:before{
+  filter: blur(20px);
+}
+
+
+section h1{
+    margin-right: 3600px;
+    margin-top: -50px;
 }
   
   
